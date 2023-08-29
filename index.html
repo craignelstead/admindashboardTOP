@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="maincontainer" class="gridcon">
+        <div id="sidebar" class="gridcon">
+            <div id="logoarea">
+                <img src="./images/odin-lined.png" alt="Odin logo" id="odin">
+                <h1>Dashboard</h1>
+            </div>
+            <ul id="sidemenu1">
+                <li>
+                    <img src="./images/icons/home.svg" alt="home"
+                    class="icon"> Home
+                </li>
+                <li>
+                    <img src="./images/icons/card-account-details.svg" alt="account"
+                    class="icon"> Profile
+                </li>
+                <li>
+                    <img src="./images/icons/message-reply.svg" alt="messages"
+                    class="icon"> Messages
+                </li>
+                <li>
+                    <img src="./images/icons/clock-time-three.svg" alt="history"
+                    class="icon"> History
+                </li>
+                <li>
+                    <img src="./images/icons/note-multiple.svg" alt="tasks"
+                    class="icon"> Tasks
+                </li>
+                <li>
+                    <img src="./images/icons/account-group.svg" alt="communites"
+                    class="icon"> Communities
+                </li>
+            </ul>
+            <ul id="sidemenu2">
+                <li>
+                    <img src="./images/icons/cog.svg" alt="settings"
+                    class="icon"> Settings
+                </li>
+                <li>
+                    <img src="./images/icons/help-box.svg" alt="support"
+                    class="icon"> Support
+                </li>
+                <li>
+                    <img src="./images/icons/shield-check.svg" alt="privacy"
+                    class="icon"> Privacy
+                </li>
+            </ul>
+        </div>
+        <div id="header" class="gridcon">
+            <div id="headertop">
+
+            </div>
+            <div id="headerbottom">
+
+            </div>
+        </div>
+        <div id="content" class="gridcon">
+            <h2 id="projectheader">Your Projects</h2>
+            <div id="projects" class="gridcon">
+                <div class="card gridcon projcard"></div>
+                <div class="card gridcon projcard"></div>
+                <div class="card gridcon projcard"></div>
+                <div class="card gridcon projcard"></div>
+                <div class="card gridcon projcard"></div>
+                <div class="card gridcon projcard"></div>
+            </div>
+            <h2 id="announcementheader">Announcements</h2>
+            <div id="announcements" class="card gridcon">
+
+            </div>
+            <h2 id="trendingheader">Trending</h2>
+            <div id="trending" class="card gridcon">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

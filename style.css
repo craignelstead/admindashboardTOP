@@ -1,0 +1,122 @@
+:root {
+    margin: 0;
+    padding: 0;
+    --specialblue: #1892d3;
+    --specialgray: #e1e8f0;
+    --specialorange: #edb431;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gridcon {
+    display: grid;
+}
+
+#maincontainer {
+    grid-template: 1fr 6fr / 1fr 6fr;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar content";
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background-color: var(--specialblue, #1892d3);
+    height: 100vh;
+    color: white;
+    grid-template-rows: 200px 30% 20%;
+    gap: 40px;
+}
+
+#logoarea {
+    display: flex;
+}
+
+#odin {
+    height: 60px;
+}
+
+#sidebar ul {
+    list-style: none;
+    color: white;
+}
+
+#sidebar>ul>li {
+    display: flex;
+}
+
+#sidebar>ul>li>img {
+    height: 25px;
+    width: 25px;
+    filter: brightness(0) invert(1);
+}
+
+#header {
+    grid-area: header;
+    background-color: white;
+    grid-template-rows: 1fr 1fr;
+}
+
+#headertop, #headerbottom {
+    display: flex;
+}
+
+#content {
+    grid-area: content;
+    background-color: var(--specialgray, #e1e8f0);
+    grid-template: 40px 1fr 40px 1fr / 4fr 1fr;
+    grid-template-areas:
+        "projecthd announcehd"
+        "cards     announce"
+        "cards     trendinghd"
+        "cards     trending";
+    gap: 10px;
+    padding: 10px 20px 30px;
+    overflow: auto;
+}
+
+#content>div, #content>h2 {
+    margin: 10px 20px;
+}
+
+#projectheader {
+    grid-area: projecthd;
+}
+
+#projects {
+    grid-area: cards;
+    gap: 20px;
+    grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    -webkit-box-shadow: 3px 3px 14px 3px rgba(0,0,0,0.38);
+    -moz-box-shadow: 3px 3px 14px 3px rgba(0,0,0,0.38);
+    box-shadow: 3px 3px 14px 3px rgba(0,0,0,0.38);
+}
+
+.projcard {
+    border-left: var(--specialorange, #edb431) solid 8px;
+}
+
+#announcementheader {
+    grid-area: announcehd;
+}
+
+#announcements {
+    grid-area: announce;
+}
+
+#trendingheader {
+    grid-area: trendinghd;
+}
+
+#trending {
+    grid-area: trending;
+}
