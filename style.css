@@ -16,7 +16,7 @@ body {
 }
 
 #maincontainer {
-    grid-template: 1fr 6fr / 1fr 6fr;
+    grid-template: 1.2fr 6fr / 1.2fr 6fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
@@ -27,12 +27,13 @@ body {
     background-color: var(--specialblue, #1892d3);
     height: 100vh;
     color: white;
-    grid-template-rows: 200px 30% 20%;
+    grid-template-rows: 80px 30% 20%;
     gap: 40px;
 }
 
 #logoarea {
     display: flex;
+    padding: 10px;
 }
 
 #odin {
@@ -42,10 +43,23 @@ body {
 #sidebar ul {
     list-style: none;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;
 }
 
 #sidebar>ul>li {
     display: flex;
+    font-size: 1.2rem;
+    padding: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+    gap: 15px;
+}
+
+#sidebar>ul>li:hover {
+    background-color: #004970;
 }
 
 #sidebar>ul>li>img {
@@ -62,6 +76,18 @@ body {
 
 #headertop, #headerbottom {
     display: flex;
+}
+
+#iconsearch, #iconalert {
+    height: 30px;
+    width: 30px;
+}
+
+#searchbox {
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--specialgray, #e1e8f0);
+    border: none;
 }
 
 #content {
