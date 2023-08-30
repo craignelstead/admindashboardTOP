@@ -4,6 +4,7 @@
     --specialblue: #1892d3;
     --specialgray: #e1e8f0;
     --specialorange: #edb431;
+    --specialdarkgray: #383434;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 }
 
 #maincontainer {
-    grid-template: 1.2fr 6fr / 1.2fr 6fr;
+    grid-template: 1.2fr 6fr / minmax(250px, 1.2fr) 6fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
@@ -56,6 +57,7 @@ body {
     border-radius: 6px;
     font-weight: bold;
     gap: 15px;
+    transition: 0.2s;
 }
 
 #sidebar>ul>li:hover {
@@ -78,16 +80,95 @@ body {
     display: flex;
 }
 
+#headertop {
+    justify-content: space-between;
+    gap: 200px;
+    padding: 0 20px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 5px;
+}
+
 #iconsearch, #iconalert {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 8px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#iconalert:hover {
+    background-color: var(--specialdarkgray, #383434);
 }
 
 #searchbox {
     height: 30px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: var(--specialgray, #e1e8f0);
     border: none;
+    flex-grow: 1;
+}
+
+#account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 30px;
+}
+
+#profilepiccontainer {
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profilepicimg {
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+.profilepicbg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--specialorange, #edb431);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.profilepicbg:hover {
+    height: 55px;
+    width: 55px;
+    background-color: #eb564b;
+}
+
+#accountnamesmall {
+    /*These aren't working...*/
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+#accountnamesmall:hover {
+    background-color: var(--specialblue, #1892d3);
+    color: white;
+}
+
+#downarrow {
+    height: 12px;
+    filter: brightness(0) invert(1);
 }
 
 #content {
@@ -114,7 +195,7 @@ body {
 
 #projects {
     grid-area: cards;
-    gap: 20px;
+    gap: 40px;
     grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
