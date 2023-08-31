@@ -102,12 +102,12 @@ body {
     height: 25px;
     width: 25px;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.2s;
 }
 
 #iconalert:hover {
-    background-color: var(--specialdarkgray, #383434);
+    background-color: var(--specialgray, #e1e8f0);
 }
 
 #searchbox {
@@ -266,16 +266,43 @@ body {
 .card {
     background-color: white;
     border-radius: 8px;
-    filter: drop-shadow(10px 10px 11px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(5px 5px 8px rgba(0, 0, 0, 0.3));
     transition: 0.4s;
 }
 
 .card:hover {
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.6));
 }
 
 .projcard {
     border-left: var(--specialorange, #edb431) solid 8px;
+    padding: 20px;
+    grid-template-rows: 1fr 30px;
+}
+
+.projcard:hover {
+    border-left: #eb564b solid 8px;
+}
+
+.cardtext {
+    overflow: auto;
+}
+
+.cardicons {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+}
+
+.iconstar, .iconeye, .iconshare {
+    height: 25px;
+    width: 25px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.iconstar:hover, .iconeye:hover, .iconshare:hover {
+    background-color: var(--specialdarkgray);
 }
 
 #announcementheader {
