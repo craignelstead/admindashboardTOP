@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     --specialblue: #1892d3;
+    --specialdarkblue: #004970;
     --specialgray: #e1e8f0;
     --specialorange: #edb431;
     --specialdarkgray: #383434;
@@ -17,11 +18,13 @@ body {
 }
 
 #maincontainer {
-    grid-template: 1.2fr 6fr / minmax(250px, 1.2fr) 6fr;
+    grid-template: 1.2fr 5fr / minmax(250px, 1fr) 6fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar content";
 }
+
+/* Sidebar Below */
 
 #sidebar {
     grid-area: sidebar;
@@ -56,12 +59,12 @@ body {
     padding: 5px;
     border-radius: 6px;
     font-weight: bold;
-    gap: 15px;
+    gap: 30px;
     transition: 0.2s;
 }
 
 #sidebar>ul>li:hover {
-    background-color: #004970;
+    background-color: var(--specialdarkblue);
 }
 
 #sidebar>ul>li>img {
@@ -70,10 +73,12 @@ body {
     filter: brightness(0) invert(1);
 }
 
+/* Header below*/
+
 #header {
     grid-area: header;
     background-color: white;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.9fr 1.1fr;
 }
 
 #headertop, #headerbottom {
@@ -82,7 +87,7 @@ body {
 
 #headertop {
     justify-content: space-between;
-    gap: 200px;
+    gap: 15%;
     padding: 0 20px;
 }
 
@@ -166,10 +171,68 @@ body {
     color: white;
 }
 
-#downarrow {
-    height: 12px;
-    filter: brightness(0) invert(1);
+#headerbottom {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+#welcomecontainer {
+    grid-template-columns: 80px 3fr;
+    gap: 20px;
+}
+
+#welcomeprofilepic {
+    padding: 10px;
+    height: 60px;
+    background-color: var(--specialorange);
+    border-radius: 50%;
+    justify-items: center;
+}
+
+#welcomecontainer > div {
+    gap: 5px;
+}
+
+#welcomecontainer > div > h4 {
+    grid-row: 1 / 2;
+    margin: 0;
+    align-self: end;
+}
+
+#welcomecontainer > div > h2 {
+    grid-row: 2 / 3;
+    font-weight: bold;
+    margin: 0;
+    align-self: start;
+}
+
+#headerbtncontainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+#headerbtncontainer>div {
+    background-color: var(--specialblue);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 25px;
+    width: 80px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+#headerbtncontainer>div:hover {
+    background-color: var(--specialdarkblue);
+    font-size: 1.3rem;
+}
+
+/*Content Container Below*/
 
 #content {
     grid-area: content;
@@ -203,9 +266,12 @@ body {
 .card {
     background-color: white;
     border-radius: 8px;
-    -webkit-box-shadow: 3px 3px 14px 3px rgba(0,0,0,0.38);
-    -moz-box-shadow: 3px 3px 14px 3px rgba(0,0,0,0.38);
-    box-shadow: 3px 3px 14px 3px rgba(0,0,0,0.38);
+    filter: drop-shadow(10px 10px 11px rgba(0, 0, 0, 0.3));
+    transition: 0.4s;
+}
+
+.card:hover {
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
 }
 
 .projcard {
