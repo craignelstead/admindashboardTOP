@@ -289,8 +289,10 @@ body {
 }
 
 .cardicons {
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: end;
+    grid-template-columns: repeat(3, 25px);
+    justify-content: end;
+    gap: 30px;
+    padding: 0 20px 10px;
 }
 
 .iconstar, .iconeye, .iconshare {
@@ -298,7 +300,7 @@ body {
     width: 25px;
     padding: 8px;
     border-radius: 8px;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .iconstar:hover, .iconeye:hover, .iconshare:hover {
