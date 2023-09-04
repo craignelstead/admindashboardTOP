@@ -32,13 +32,12 @@ function listen() {
 
     //Sets image on hover for share button
     sharesArr.forEach((share) => share.addEventListener('mouseover', (e) => {
-        e.target.src = './images/icons/share-variant.svg';}
-    ));
-
+        e.target.src = './images/icons/share-variant.svg';}));
     //Sets image on end hover for share button
     sharesArr.forEach((share) => share.addEventListener('mouseleave', (e) => {
-        e.target.src = './images/icons/share-variant-outline.svg';}
-    ));
+        e.target.src = './images/icons/share-variant-outline.svg';}));
+    //Displays copy message when share button is clicked
+    sharesArr.forEach((share) => share.addEventListener('click', showCopyMsg));
 }
 
 //Toggles notification status
@@ -146,8 +145,11 @@ function clickEye(favEvent) {
     return;
 }
 
-function toggleShare(e) {
-    if (e.target.src === './images/icons/share-variant-outline.svg') {
-        e.target.src = './images/icons/share-variant.svg'
-    }
+//Copy message appears then disappears
+function showCopyMsg() {
+    let msg = document.getElementById('copythat');
+
+    msg.className = 'show';
+
+    setTimeout(() => { msg.className = msg.className.replace("show", ""); }, 3000);
 }
