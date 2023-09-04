@@ -113,7 +113,7 @@ body {
     transition: 0.2s;
 }
 
-#iconalert:hover {
+#iconalert:hover, #iconsearch:hover {
     background-color: var(--specialgray, #e1e8f0);
 }
 

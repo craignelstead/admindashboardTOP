@@ -1,9 +1,11 @@
 
-//Global variables for the following buttons: Alerts, Favorite, Watch, and share
+//Global variables for the following buttons: Alerts, Favorite, Watch, Share, & Search
 const notif = document.getElementById('iconalert');
 const favsNodes = document.getElementsByClassName('iconstar');
 const eyesNodes = document.getElementsByClassName('iconeye');
 const sharesNodes = document.getElementsByClassName('iconshare');
+const searchBtn = document.getElementById('iconsearch');
+const searchBox = document.getElementById('searchbox');
 
 //Convert nodelists to arrays
 let favsArr = Array.from(favsNodes);
@@ -38,6 +40,9 @@ function listen() {
         e.target.src = './images/icons/share-variant-outline.svg';}));
     //Displays copy message when share button is clicked
     sharesArr.forEach((share) => share.addEventListener('click', showCopyMsg));
+
+    //Event listener for search
+    searchBtn.addEventListener('click', clearSearch);
 }
 
 //Toggles notification status
@@ -152,4 +157,9 @@ function showCopyMsg() {
     msg.className = 'show';
 
     setTimeout(() => { msg.className = msg.className.replace("show", ""); }, 3000);
+}
+
+//Clears search box
+function clearSearch() {
+    searchBox.value = '';
 }
