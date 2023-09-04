@@ -25,7 +25,10 @@ function listen() {
     favsArr.forEach((fav) => fav.addEventListener('mouseleave', (e) => hoverFavEnd(e)));
     favsArr.forEach((fav) => fav.addEventListener('click', (e) => clickFav(e)));
 
-    eyesArr.forEach((eye) => eye.addEventListener('click', toggleWatch));
+    //Event listeners for watches
+    eyesArr.forEach((eye) => eye.addEventListener('mouseover', (e) => hoverEyeStart(e)));
+    eyesArr.forEach((eye) => eye.addEventListener('mouseleave', (e) => hoverEyeEnd(e)));
+    eyesArr.forEach((eye) => eye.addEventListener('click', (e) => clickEye(e)));
 
     //Sets image on hover for share button
     sharesArr.forEach((share) => share.addEventListener('mouseover', (e) => {
@@ -96,8 +99,51 @@ function clickFav(favEvent) {
     return;
 }
 
-function toggleWatch() {
+//Determine image source when hovering over watch icon 
+function hoverEyeStart(favEvent) {
+    let source = favEvent.target.getAttribute('src');
 
+    switch (source) {
+        case './images/icons/eye-plus-outline.svg':
+            favEvent.target.src = './images/icons/eye-plus.svg';
+            break;
+        case './images/icons/eye-plus.svg':
+            favEvent.target.src = './images/icons/eye-plus-outline.svg';
+            break;
+        case './images/icons/eye-check-outline.svg':
+            favEvent.target.src = './images/icons/eye-remove.svg';
+            break;
+    }
+    return;
+}
+
+//Determine image source when mouse leaves watch icon
+function hoverEyeEnd(favEvent) {
+    let source = favEvent.target.getAttribute('src');
+
+    switch (source) {
+        case './images/icons/eye-plus.svg':
+            favEvent.target.src = './images/icons/eye-plus-outline.svg';
+            break;
+        case './images/icons/eye-remove.svg':
+            favEvent.target.src = './images/icons/eye-check-outline.svg';
+            break;
+    }
+    return;
+}
+
+//Determine image source when clicking watch icon
+function clickEye(favEvent) {
+    let source = favEvent.target.getAttribute('src');
+
+    switch (source) {
+        case './images/icons/eye-plus.svg':
+            favEvent.target.src = './images/icons/eye-remove.svg';
+            break;
+        case './images/icons/eye-remove.svg':
+            favEvent.target.src = './images/icons/eye-plus.svg';
+    }
+    return;
 }
 
 function toggleShare(e) {
