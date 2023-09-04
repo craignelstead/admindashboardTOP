@@ -78,7 +78,7 @@ body {
 #header {
     grid-area: header;
     background-color: white;
-    grid-template-rows: 0.9fr 1.1fr;
+    grid-template-rows: 0.8fr 1.2fr;
 }
 
 #headertop, #headerbottom {
