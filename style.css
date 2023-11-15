@@ -41,6 +41,10 @@ body {
     padding: 10px;
 }
 
+#logoarea > h1 {
+    cursor: pointer;
+}
+
 #odin {
     height: 60px;
     filter: brightness(0) invert(1);
@@ -64,6 +68,10 @@ body {
     font-weight: bold;
     gap: 30px;
     transition: 0.2s;
+}
+
+li, img {
+    cursor: pointer;
 }
 
 #sidebar>ul>li:hover {
@@ -171,6 +179,7 @@ body {
     padding: 5px 15px;
     transition: 0.2s;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #accountnamesmall:hover {
@@ -232,6 +241,7 @@ body {
     width: 80px;
     text-align: center;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 #headerbtncontainer>div:hover {
@@ -292,6 +302,10 @@ body {
     overflow: auto;
 }
 
+.cardtext > h3 {
+    cursor: pointer;
+}
+
 .cardicons {
     grid-template-columns: repeat(3, 25px);
     justify-content: end;
@@ -332,6 +346,7 @@ body {
 .announcehead {
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 .announcetext {
@@ -378,6 +393,10 @@ body {
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     font-size: 0.8rem;
+}
+
+.trendname, .trendproj {
+    cursor: pointer;
 }
 
 #prof1 {
